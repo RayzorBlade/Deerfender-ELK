@@ -1,0 +1,46 @@
+----------------------------------------------------------------
+LUCKY DUCK INVESTIGATION SUMMARY
+----------------------------------------------------------------
+
+-- SUMMARY --
+
+This investigation has concluded the following outcomes.
+
+Two individuals are most likely responsible for the major roulette losses on March 10th, 12th, and 15th.
+
+Player: Mylie Schmidt
+Dealer: Billy Jones
+
+-- SUPPORTING EVIDENCE --
+
+Investigation and analysis of Lucky Duck's Win/Loss player and Dealer Schedule log files, revealed the following.
+
+A total of 13 significant roulette losses were incurred accross 3 days in March.
+Dates, times, loss amounts and findings are detailed in the following report file:
+
+../Player_Analysis/Notes_Player_Analysis
+
+In summary, The following losses were incurred on the dates and times below:
+
+10th March, 05:00 AM -$82,348
+10th March, 08:00 AM -$97,383
+10th March, 02:00 PM -$82,348
+10th March, 08:00 PM -$65,348
+10th March, 11:00 PM -$88,383
+12th March, 05:00 AM -$182,300
+12th March, 08:00 AM -$97,383
+12th March, 02:00 PM -$82,348
+12th March, 08:00 PM -$65,792
+12th March, 11:00 PM -$88,229
+15th March, 05:00 AM -$82,844
+15th March, 08:00 AM -$97,001
+15th March, 02:00 PM -$182,419
+
+Investigation revealed that one player, Mylie Schmidt, was playing during each of the days and times above when the losses occurred.
+Mylie Schmidt's name appears 13 times accross all 13 time entries. All other players only appear once at any given day and time.
+
+It was also found that one Dealer, Billy Jones, was sheduled exclusively accross each of these 13 dates and times where losses occurred.
+Significant findings are detailed in the Notes_Dealer_Analysis report.
+
+
+

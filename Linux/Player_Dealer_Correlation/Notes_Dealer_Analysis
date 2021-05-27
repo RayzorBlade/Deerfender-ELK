@@ -1,0 +1,32 @@
+ROULETTE LOSSES - DEALER ANALYSIS NOTES
+
+
+----------------------------------------------------------------
+DEALER WORKING DURING LOSSES:
+----------------------------------------------------------------
+
+
+The following script was written and executed to create a report of which Roulette dealers were working on the days and times that the Roulette losses occurred.
+
+The script Looks up and prints out the day, time, first name and last name of the Roulette Dealer who was sheduled on each of the dates and times where losses were incurred.
+
+The dates and times are extracted from the Roulette_Losses file, and dealers' names from the corresponding MMDD_Dealer_schedule files.
+
+See the Dealers_working_during_losses.sh script content for further details and commentary.
+
+----------------------------------------------------------------
+RESULTS:
+----------------------------------------------------------------
+
+The script above was executed and results directed to the following file:
+Dealers_working_during_losses.
+
+This file was analysed, and it was found that one Dealer was scheduled exclusively accross each of the dates and times where losses occurred.
+
+The dealer's name is:
+Billy Jones
+
+The following command was then run against this file to determine the number of times this dealer worked when there was major losses:
+grep -o 'Billy Jones' Dealers_working_during_losses | wc -l
+
+The command above reveals that Billy Jones was working on the same days and times as all 13 occurrances of major losses.
