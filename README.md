@@ -13,20 +13,20 @@
 
 
 This document contains the following details:
-- Description of the Deerfender ELK stack network lab topology
-- Related access policies
+- Description of the topology
 - ELK configuration
   - Beats in use
   - Machines being monitored
+- Access policies
 - How to use the Ansible build
-- Some extra scripts
+- Extra scripts and screenshots in the repository folders 
 
 <br />
 
 # Contributers
 
-While the AWS Virtual lab, diagram, IP addresses, files, and screenshots referred to in this document are artefacts specific to the Author's work, all members of the Deefender project team contributed to this readme file.
-  
+While the Azure Virtual lab environment IP addresses, files, and screenshots referred to in this document are specific to the author's environment, all members of the Deefender project team contributed to this readme file.
+
 <br />
 
 # Virtual Lab Environmment
@@ -319,9 +319,9 @@ We have installed the following Beats on these machines:
 <br />
 <br />
 
-# Using the Playbook
+# Using the Playbooks
 
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+In order to use the playbooks, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 - SSH into the control node and attach to the Ansible container
 
@@ -334,18 +334,32 @@ In order to use the playbook, you will need to have an Ansible control node alre
     $ root@957e408d0478:~# 
     ```
 
-- Copy the YAML files located in this Deefender repository's <a href="Ansible">`Ansible`</a> folder to your Ansible control node's `/etc/ansible/roles` folder.
-- Update the /etc/ansible/hosts file to include the ELK server IP and any hosts to be monitored. In the following example, the ELK ip is configured under the [elk] group, and the 3 Webserver IPs are configured under the [webservers] group. 
+- Copy the YAML files located in this repository's <a href="Ansible">`Ansible`</a> folder to your Ansible control node's `/etc/ansible/roles` folder.
+- Update the /etc/ansible/hosts file to include the ELK server IP and any hosts to be monitored.  
+In the following example, the ELK IP is configured under the [elk] group, and the 3 Webserver IPs are configured under the [webservers] group. 
 
-    ![](Images/hosts.png)
+    <img src="Images/hosts.png" alt="hosts" style="width:70%;"/>
  
-- Note - ensure the interpreter is set to ```ansible_python_interpreter=/usr/bin/python3``` as seen in the image above
-- Run the ELK playbook, followed optionally by the Filebeat and Metricbeat playbooks
+- Ensure the interpreter is set to ```ansible_python_interpreter=/usr/bin/python3``` as seen in the image above
+- Run the ELK playbook, followed by the Filebeat and Metricbeat playbooks
     ```
-    Example - Run ELK Playbook:
+    # Run the ELK Playbook:
     $ root@957e408d0478:/etc/ansible/roles# ansible-playbook elk-playbook.yml
+
+    # Run the Filebeat Playbook:
+    $ root@957e408d0478:/etc/ansible/roles# ansible-playbook filebeat-playbook.yml
+
+    # Run the Metricbeat Playbook:
+    $ root@957e408d0478:/etc/ansible/roles# ansible-playbook metricbeat-playbook.yml
     ```
--  Using a Web browser, navigate to <ELK_SERVER_IP>:5601 to check that the installation worked as expected.
+-  Using a Web browser, navigate to **<ELK_SERVER_IP>:5601** to check that the installation has worked as expected.
+
+
+<br />
+
+## Congratulations !   
+You now have a fully functional ELK server monitoring logs from multiple web servers.
+
 
 <br />
 
